@@ -1,7 +1,7 @@
 using System;
-using Microsoft.Extensions.DependencyInjection;
+using VendorEngrams;
 
-namespace VendorEngrams.Microsoft.Extensions.DependencyInjection
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
