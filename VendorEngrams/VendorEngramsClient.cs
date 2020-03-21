@@ -15,6 +15,16 @@ namespace VendorEngrams
         private readonly VendorEngramsOptions _options;
         private readonly ILogger _logger;
 
+        private static JsonSerializerOptions _serializerOptions = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        };
+
+        static VendorEngramsClient()
+        {
+            _serializerOptions.Converters.Add(new VendorJsonConverter());
+        }
+
         public VendorEngramsClient(HttpClient client, IOptions<VendorEngramsOptions> options, ILogger<VendorEngramsClient> logger)
         {
             _client = client;
@@ -49,7 +59,7 @@ namespace VendorEngrams
                     throw new Exception(msg);
                 }
 
-                return JsonSerializer.Deserialize<T>(json);
+                return JsonSerializer.Deserialize<T>(json, _serializerOptions);
             }
             catch(HttpRequestException ex)
             {

@@ -4,7 +4,7 @@ namespace VendorEngrams
 {
     public class Vendor
     {
-        public int Id { get; set; }
+        public uint Hash { get; set; }
         public bool Display { get; set; }
         public DropStatus Drop { get; set; }
         public string Shorthand { get; set; }
