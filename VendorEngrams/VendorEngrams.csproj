@@ -2,6 +2,16 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>VendorEngrams</PackageId>
+    <Version>1.0.0-beta01</Version>
+    <Authors>Andy Schott</Authors>
+    <Company />
+    <PackageDescription>A .NET Core client for VendorEngrams.xyz.</PackageDescription>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>bungie;destiny2;vendorengrams</PackageTags>
+    <RepositoryUrl>https://github.com/andyschott/VendorEngrams</RepositoryUrl>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Net.Http" Version="4.3.4"/>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.2"/>
